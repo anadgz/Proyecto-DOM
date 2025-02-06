@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/dscgktluo/image/upload/v1738237882/Proyecto%202/logo_rfccdu.png"
+      type="image/x-icon"
+    />
+    <title>JD tienda</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <img
+          src="https://res.cloudinary.com/dscgktluo/image/upload/v1738237882/Proyecto%202/logo_rfccdu.png"
+          alt=""
+        />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#">Hombre</a></li>
+        <li><a href="#">Mujer</a></li>
+        <li><a href="#">Niños</a></li>
+        <li><a href="#">Ofertas</a></li>
+      </ul>
+      <div class="nav-menu-toggle">
+        <img src="./assets/🦆 icon _burger menu_.png" alt="Menú" />
+      </div>
+      <div class="nav-icons">
+        <a href="#" title="Filtros"
+          ><img
+            src="https://res.cloudinary.com/dscgktluo/image/upload/v1738239041/Proyecto%202/icon__filter__etoy9c.png"
+            alt="Filtrar"
+        /></a>
+        <a href="#" title="Cesta de la compra"
+          ><img
+            src="https://res.cloudinary.com/dscgktluo/image/upload/v1738239041/Proyecto%202/icon__shopping_basket__zogbil.png"
+            alt="Cesta"
+        /></a>
+        <a href="#" title="Usuario"
+          ><img
+            src="https://res.cloudinary.com/dscgktluo/image/upload/v1738239042/Proyecto%202/icon__User_avatar__rttkwx.png"
+            alt="Usuario"
+        /></a>
+      </div>
+    </nav>
+    <section class="hero-section">
+      <img
+        src="https://res.cloudinary.com/dscgktluo/image/upload/v1738239043/Proyecto%202/7d329c8bb1b3ce44d6971087ed3119f3_ok0wji.jpg"
+        alt="Imagen de sección principal"
+      />
+    </section>
+    <div id="filtros">
+      <div class="filter-options" id="filter-options">
+        <div class="filter-group">
+          <select id="brand-select" class="zapa-button"></select>
+        </div>
+        <div class="filter-group">
+          <input
+            type="text"
+            class="zapa-button"
+            id="price-input"
+            placeholder="Precio máximo"
+            value=""
+          />
+        </div>
+        <div class="filter-buttons">
+          <button id="apply-filter" class="zapa-button">Filtrar</button>
+          <button id="reset-filter" class="zapa-button">Limpiar</button>
+        </div>
+      </div>
+      <div class="filter-button">
+        <button id="filter-toggle" class="filter-toggle">
+          <img
+            src="https://res.cloudinary.com/dscgktluo/image/upload/v1738240403/Proyecto%202/icon__arrow_ios_downward__kdfhzb.png"
+            alt="Filtrar"
+          />
+        </button>
+      </div>
+    </div>
+    <section id="zapatillas" class="flex-container"></section>
+    <footer class="footer">
+      <div class="footer-column">
+        <h3>Compra con JD</h3>
+        <ul>
+          <li>Guía de tallas</li>
+          <li>Buscador de tallas</li>
+          <li>Descuento estudiantes</li>
+          <li>Calendario lanzamientos</li>
+          <li>Inscribite a JDX</li>
+          <li>JD Blog</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Atención al cliente</h3>
+        <ul>
+          <li>Preguntas frecuentes</li>
+          <li>Envíos y devoluciones</li>
+          <li>Seguimiento de envío</li>
+          <li>Contacto</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Aviso legal</h3>
+        <ul>
+          <li>Términos y condiciones</li>
+          <li>Promociones y condiciones</li>
+          <li>Política de privacidad</li>
+          <li>Política de Cookies</li>
+          <li>Ajustes de Cookies</li>
+          <li>Accesibilidad</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
