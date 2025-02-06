@@ -217,13 +217,45 @@ document.getElementById('apply-filter').addEventListener('click', () => {
     return isBrandMatch && isPriceMatch
   })
 
-  printZapas(filteredZapatillas)
+  const container = document.getElementById('zapatillas')
+  container.innerHTML = ''
+
+  const existingMessage = document.querySelector('.no-matches-message')
+  if (existingMessage) {
+    existingMessage.remove()
+  }
+
+  if (filteredZapatillas.length === 0) {
+    const message = document.createElement('div')
+    message.classList.add('no-matches-message')
+    message.innerHTML =
+      'No existen coincidencias, pero aquí tienes nuestras sugerencias:'
+
+    const body = document.body
+    body.insertBefore(message, container)
+
+    const randomZapatillas = getRandomZapatillas(3)
+    printZapas(randomZapatillas)
+  } else {
+    printZapas(filteredZapatillas)
+  }
 })
 
 // BOTÓN LIMPIAR FILTROS
 document.getElementById('reset-filter').addEventListener('click', () => {
   document.getElementById('brand-select').value = ''
   document.getElementById('price-input').value = ''
-
+  const container = document.getElementById('zapatillas')
+  container.innerHTML = ''
+  const existingMessage = document.querySelector('.no-matches-message')
+  if (existingMessage) {
+    existingMessage.remove()
+  }
   printZapas(zapatillas)
 })
+
+// GET RANDOM ZAPATILLAS
+function getRandomZapatillas(count) {
+  const shuffled = [...zapatillas].sort(() => 0.5 - Math.random())
+  return shuffled.slice(0, count)
+}

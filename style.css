@@ -314,6 +314,17 @@ p{
   height: 30px;
 }
 
+.no-matches-message {
+  width: 100%;
+  justify-content: center;
+  height: 60px;
+  display: flex;
+  align-items: end;
+  margin-top: 20px;
+  font-family: var(--ad-primary-font);
+  font-weight: 600;
+}
+
 @media (max-width: 850px) {
   .nav-menu {
     display: none;
